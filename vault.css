@@ -58,7 +58,7 @@ html,body{
     font-weight: 900;
 }
 
-.left .fas.fa-user,.fas.fas.fa-shield-alt,.fas.fa-magic{
+.left .fas.fa-user,.fas.fa-lock,.fas.fa-magic{
     font-size: 75px;
     color: #ff4d00;
     width: 100%;
@@ -77,7 +77,7 @@ html,body{
     align-items: center;
     display: flex;
 }
-.fas.fa-shield-alt:hover{
+.fas.fa-shield-alt{
     color: black;
     background-color: #ff4d00;
     width: 100%;
@@ -87,7 +87,7 @@ html,body{
     display: flex;
     cursor: pointer;
 }
-.fas.fa-lock{
+.fas.fa-lock:hover{
     color: black;
     background-color: #ff4d00;
     width: 100%;
@@ -96,7 +96,6 @@ html,body{
     align-items: center;
     display: flex;
     cursor: pointer;
-    border-radius: 2px;
 }
 .fas.fa-magic:hover{
     color: black;
@@ -108,40 +107,104 @@ html,body{
     display: flex;
     cursor: pointer;
 }
-h2 {
+#add{
     position: relative;
-    text-align: center;
+    top: 10px;
+    left: 25%;
+    font-size: x-large;
+    background-color: #121212;
     color: #ff4d00;
+    border: 2px solid #ff4d00;
+    border-radius: 4px;
 }
 
-.output-shown {
-    border: 1px;
-    text-align: center;
-    margin-left: 35px;
-    width: 300px;
-    height: 40px;
-    border-radius: 10px;
+#add-form{
+    position: absolute;
+    top: 19%;
+    left: 13%;
+    padding: 2px;
+    gap: 6px;
+    height: 33%;
+    width: 75%;
+    background-color: #121212;
+    display: none;
+    border-radius: 2px;
+    flex-direction: column;
+    backdrop-filter: blur(10px);
+    z-index: 10;
 }
-
-.f-button {
-    text-align: center;
-    margin-top: 35px;
-    margin-left: 85px;
-    width: 200px;
-    height: 30px;
-    border-radius: 10px;
-    color: black;
-    background-color: aqua;
-}
-
-.p-text {
-    margin-left: 30px;
-    width: 300px;
-    height: 25px;
-    color: white;
+#add-form #website-name{
+    width: 256px;
+    margin-left: 2%;
+    margin-top: 2%;
+    height: 33px;
     background-color: black;
-    border: 1px solid black;
-    border-radius: 10px;
-    padding: 3px;
-    text-align: center;
+    border: 1px solid #ff4d00;
+    border-radius: 3px;
+    color: #ff4d00;
+    outline: none;
+    padding-left: 5px;
+}
+#add-form #website-email,#website-password{
+    margin-top: 4px;
+    width: 256px;
+    margin-left: 2%;
+    height: 33px;
+    background-color: black;
+    border: 1px solid #ff4d00;
+    border-radius: 3px;
+    color: #ff4d00;
+    outline: none;
+    padding-left: 5px;
+}
+
+#add-form .submit,.cancel{
+    margin-top: 2%;
+    margin-left: 2%;
+    width: 256px;
+    height: 37px;
+    color: #ff4d00;
+    background-color: #121212;
+    border: 2px solid #ff4d00;
+    border-radius: 3px;
+}
+#vault-entries{
+    position: absolute;
+    top: 24%;
+    left: 2%;
+    height: 33%;
+    width: 345px;
+    background-color: #121212;
+    display: flex;
+    flex-direction: column;
+    border-radius: 2px;
+    backdrop-filter: blur(10px);
+}
+
+#vault-entries .entry {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    padding: 10px;
+    border: 1px solid #ff4d00;
+    border-radius: 4px;
+    color: #ff4d00;
+    background-color: #121212;
+}
+
+#vault-entries .entry .website {
+    font-weight: 1000;
+    font-size: 25px;
+}
+
+#vault-entries .entry .email {
+    margin-right: 20px;
+}
+
+#vault-entries .entry .show-password {
+    cursor: pointer;
+    color: #ff4d00;
+    width: 120px;
+    border: 2px solid #ff4d00;
 }

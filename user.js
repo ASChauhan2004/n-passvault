@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
             document.querySelector('.email').textContent = user.email;
         }
     }else {
-        window.location.href = 'login/html';
+        window.location.href = 'login.html';
     }
 });
 

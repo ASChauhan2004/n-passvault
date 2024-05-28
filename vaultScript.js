@@ -1,4 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const token = localStorage.getItem('token');
+    if(!token){
+        window.location.href = '/login.html';
+    }
     document.querySelector('.fas.fa-user').addEventListener('click', () => {
         window.location.href = '/user.html';
     });
@@ -14,6 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('.fas.fa-magic').addEventListener('click', () => {
         window.location.href = '/passgen.html';
     });
+    
 
     fetchVaultEntries();
 });

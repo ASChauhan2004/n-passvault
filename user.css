@@ -5,41 +5,43 @@
 }
 
 .left{
-    position: relative;
-    height: 97%;
-    width: 20%;
-    background-color: black;
-    top: 0%;
-    left: 0%;
-    font-size: xxx-large;
-    color: aliceblue;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 20px;
+  position: relative;
+  height: 97%;
+  width: 20%;
+  background-color: black;
+  top: 0%;
+  left: 0%;
+  font-size: 75px;
+  color: #ff4d00;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-right: 2px solid #ff4d00;
+  z-index: 10;
 }
 
 .right{
     position: absolute;
-    height:100%;
+    height:97%;
     width: 80%;
-    background-color:rgb(0, 30, 40);
+    background-color:rgb(0, 0, 0);
     top: 0%;
     right: 0;
 }
-
 .right .header{
-    position: relative;
-    background-color: #212121;
-    top: 0%;
-    height: 15%;
-    width: 100%;
-    font-size: xxx-large;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items:center;
+  position: relative;
+  background-color: black;
+  top: 0%;
+  height: 15%;
+  width: 100%;
+  font-size: xxx-large;
+  color: #ff4d00;
+  display: flex;
+  justify-content: center;
+  align-items:end;
+  font-weight: 900;
 }
+
 .right .details{
     position: absolute;
     top: 16%;
@@ -47,24 +49,31 @@
     height: 13%;
     width: 90%;
     border-radius: 5px;
-    background-color: #212121;
+    background-color: #121212;
     display: flex;
     flex-direction: column;
     padding-top: 5%;
     padding-left: 5%;
     font-size: xx-large;
-    color: white;
+    font-weight: 1000;
+    color: #ff4d00;
 }
 .right .details .email{
     font-size: x-large;
+    font-weight: 200;
 }
 .right .log{
+  justify-content: left;
+  align-items: left;
+  display: flex;
+  gap: 7px;
+  padding-top: 6px;
     position: absolute;
-    bottom: 13%;
+    bottom: 8%;
     left: 2%;
     --border: 2px;    /* the border width */
   --slant: 0.1em;   /* control the slanted corners */
-  --color: #cacaca; /* the color */
+  --color: #ff4d00; /* the color */
   width: 96%;
   height: 7%;
   font-size: 30px;
@@ -95,22 +104,27 @@
   .log:hover,
   .log:active{
     background-size: 100% 100%;
-    color: #ff3e3e;
+    color: black;
     --t: 0.2s 0.1s;
   }
   .log:active {
-    --s: #0005;
+    --s: #121212;
     transition: none;
   }
 
 
 .right .lock {
     position: absolute;
-    bottom: 6%;
+    justify-content: left;
+  align-items: left;
+  display: flex;
+  gap: 7px;
+  padding-top: 6px;
+    bottom: 1%;
     left: 2%;
     --border: 2px;    /* the border width */
   --slant: 0.1em;   /* control the slanted corners */
-  --color: #cacaca; /* the color */
+  --color: #ff4d00; /* the color */
   width: 96%;
   height: 6.5%;
   font-size: 30px;
@@ -118,6 +132,7 @@
   cursor: pointer;
   font-weight: bold;
   color: var(--color);
+  background-color: #121212;
   background: 
      linear-gradient(to bottom left,var(--color)  50%,#0000 50.1%) top right,
      linear-gradient(to top   right,var(--color)  50%,#0000 50.1%) bottom left;
@@ -142,24 +157,24 @@
   .lock:hover,
   .lock:active{
     background-size: 100% 100%;
-    color: #ff3e3e;
+    color: black;
     --t: 0.2s 0.1s;
   }
   .lock:active {
-    --s: #0005;
+    --s: #121212;
     transition: none;
   }
 
 .right .options{
     position: absolute;
-    bottom: 20%;
+    bottom: 15%;
     left: 2%;
-    color:#ffffff;
+    color:#ff4d00;
     font-weight: bold;
 
 }
 
-@import url("https://fonts.googleapis.com/css?family=Fira+Sans");
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
 html, body {
   position: relative;
   min-height: 100vh;
@@ -167,7 +182,57 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: "Fira Sans", Helvetica, Arial, sans-serif;
+  font-family: "Chakra Petch", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.fas.fa-user{
+  color: black;
+  background-color: #ff4d00;
+  width: 100%;
+  height: 15%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.fas.fa-shield-alt,.fas.fa-lock,.fas.fa-magic{
+  font-size: 75px;
+  color: #ff4d00;
+  width: 100%;
+  height: 15%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  cursor: pointer;
+}
+.fas.fa-shield-alt:hover{
+  color: black;
+  background-color: #ff4d00;
+  width: 100%;
+  height: 15%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  cursor: pointer;
+}
+.fas.fa-lock:hover{
+  color: black;
+  background-color: #ff4d00;
+  width: 100%;
+  height: 15%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  cursor: pointer;
+}
+.fas.fa-magic:hover{
+  color: black;
+  background-color: #ff4d00;
+  width: 100%;
+  height: 15%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  cursor: pointer;
 }
