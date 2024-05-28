@@ -1,0 +1,71 @@
+.main {
+    position: absolute;
+    height: 650px;
+    width: 450px;
+}
+
+.left{
+    position: relative;
+    height: 97%;
+    width: 20%;
+    background-color: black;
+    top: 0%;
+    left: 0%;
+    font-size: xxx-large;
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.right {
+    position: absolute;
+    height: 100%;
+    width: 80%;
+    background-color: chocolate;
+    top: 0%;
+    right: 0;
+}
+
+.title {
+    font-size: large;
+    color: aqua;
+}
+
+h2 {
+    position: relative;
+    text-align: center;
+}
+
+.output-shown {
+    border: 1px;
+    text-align: center;
+    margin-left: 35px;
+    width: 300px;
+    height: 40px;
+    border-radius: 10px;
+}
+
+.f-button {
+    text-align: center;
+    margin-top: 35px;
+    margin-left: 85px;
+    width: 200px;
+    height: 30px;
+    border-radius: 10px;
+    color: black;
+    background-color: aqua;
+}
+
+.p-text {
+    margin-left: 30px;
+    width: 300px;
+    height: 25px;
+    color: white;
+    background-color: black;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 3px;
+    text-align: center;
+}

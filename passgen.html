@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="./genstyles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <div class="main">
+        <div class="left">
+            <i class="fas fa-user"></i>
+            <br>
+            <i class="fas fa-shield-alt"></i>
+            <br>
+            <i class="fas fa-lock"></i>
+            <br>
+            <i class="fas fa-magic"></i>
+            </div>
+        <div class="right">
+            <h2>Generator</h2>
+            <input class="output-shown" type="text" id="password" placeholder="Password" readonly>
+            <div class="buttons">
+                <div class="options">Length <input class="l-input" type="number" id="length" placeholder="Length" min="1" max="128"></div>
+                <label class="options"><input type="checkbox" id="include-uppercase"> A-Z</label>
+                <label class="options"><input type="checkbox" id="include-lowercase"> a-z</label>
+                <label class="options"><input type="checkbox" id="include-numbers"> 0-9</label>
+                <label class="options"><input type="checkbox" id="include-special"> Special Characters</label>
+            </div>
+            <button class="f-button" id="generate">Generate</button>
+        </div>
+    </div>
+    <script src="./genscript.js"></script>
+</body>
+</html>

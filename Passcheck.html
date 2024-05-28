@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Strength Checker</title>
+    <link rel="stylesheet" href="check.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <div class="main">
+        <div class="left">
+            <i class="fas fa-user"></i>
+            <br>
+            <i class="fas fa-shield-alt"></i>
+            <br>
+            <i class="fas fa-lock"></i>
+            <br>
+            <i class="fas fa-magic"></i>
+        </div>
+        <div class="right">
+            <h2>Strength Checker</h2>
+            <input class="output-shown" type="text" maxlength="20" name="password" id="password" placeholder="Type here....">
+            <button class="f-button" id="check">Check</button>
+            <p class="p-text" id="strength">Password Strength :</p>
+            <p class="p-text" id="time-to-crack">Estimated Time to crack :</p>
+        </div>
+    </div>
+    <script src="./checkscript.js"></script>
+</body>
+</html>

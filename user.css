@@ -1,0 +1,173 @@
+.main{
+    position: absolute;
+    height: 650px;
+    width: 450px;  
+}
+
+.left{
+    position: relative;
+    height: 97%;
+    width: 20%;
+    background-color: black;
+    top: 0%;
+    left: 0%;
+    font-size: xxx-large;
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.right{
+    position: absolute;
+    height:100%;
+    width: 80%;
+    background-color:rgb(0, 30, 40);
+    top: 0%;
+    right: 0;
+}
+
+.right .header{
+    position: relative;
+    background-color: #212121;
+    top: 0%;
+    height: 15%;
+    width: 100%;
+    font-size: xxx-large;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+.right .details{
+    position: absolute;
+    top: 16%;
+    left: 2%;
+    height: 13%;
+    width: 90%;
+    border-radius: 5px;
+    background-color: #212121;
+    display: flex;
+    flex-direction: column;
+    padding-top: 5%;
+    padding-left: 5%;
+    font-size: xx-large;
+    color: white;
+}
+.right .details .email{
+    font-size: x-large;
+}
+.right .log{
+    position: absolute;
+    bottom: 13%;
+    left: 2%;
+    --border: 2px;    /* the border width */
+  --slant: 0.1em;   /* control the slanted corners */
+  --color: #cacaca; /* the color */
+  width: 96%;
+  height: 7%;
+  font-size: 30px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  color: var(--color);
+  background: 
+     linear-gradient(to bottom left,var(--color)  50%,#0000 50.1%) top right,
+     linear-gradient(to top   right,var(--color)  50%,#0000 50.1%) bottom left;
+  background-size: calc(var(--slant) + 1.3*var(--border)) calc(var(--slant) + 1.3*var(--border));
+  background-repeat: no-repeat;
+  box-shadow:
+    0 0 0 200px inset var(--s,#0000),
+    0 0 0 var(--border) inset var(--color);
+  clip-path: 
+      polygon(0 0, calc(100% - var(--slant)) 0, 100% var(--slant),
+              100% 100%, var(--slant) 100%,0 calc(100% - var(--slant))
+             );
+  transition: color var(--t,0.3s), background-size 0.3s;
+}
+.log:focus-visible {
+    outline-offset: calc(-1*var(--border));
+    outline: var(--border) solid #000c;
+    clip-path: none;
+    background-size: 0 0;
+  }
+  .log:hover,
+  .log:active{
+    background-size: 100% 100%;
+    color: #ff3e3e;
+    --t: 0.2s 0.1s;
+  }
+  .log:active {
+    --s: #0005;
+    transition: none;
+  }
+
+
+.right .lock {
+    position: absolute;
+    bottom: 6%;
+    left: 2%;
+    --border: 2px;    /* the border width */
+  --slant: 0.1em;   /* control the slanted corners */
+  --color: #cacaca; /* the color */
+  width: 96%;
+  height: 6.5%;
+  font-size: 30px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  color: var(--color);
+  background: 
+     linear-gradient(to bottom left,var(--color)  50%,#0000 50.1%) top right,
+     linear-gradient(to top   right,var(--color)  50%,#0000 50.1%) bottom left;
+  background-size: calc(var(--slant) + 1.3*var(--border)) calc(var(--slant) + 1.3*var(--border));
+  background-repeat: no-repeat;
+  box-shadow:
+    0 0 0 200px inset var(--s,#0000),
+    0 0 0 var(--border) inset var(--color);
+  clip-path: 
+      polygon(0 0, calc(100% - var(--slant)) 0, 100% var(--slant),
+              100% 100%, var(--slant) 100%,0 calc(100% - var(--slant))
+             );
+  transition: color var(--t,0.3s), background-size 0.3s;
+    
+}
+.lock:focus-visible {
+    outline-offset: calc(-1*var(--border));
+    outline: var(--border) solid #000c;
+    clip-path: none;
+    background-size: 0 0;
+  }
+  .lock:hover,
+  .lock:active{
+    background-size: 100% 100%;
+    color: #ff3e3e;
+    --t: 0.2s 0.1s;
+  }
+  .lock:active {
+    --s: #0005;
+    transition: none;
+  }
+
+.right .options{
+    position: absolute;
+    bottom: 20%;
+    left: 2%;
+    color:#ffffff;
+    font-weight: bold;
+
+}
+
+@import url("https://fonts.googleapis.com/css?family=Fira+Sans");
+html, body {
+  position: relative;
+  min-height: 100vh;
+  background-color: #E1E8EE;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Fira Sans", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

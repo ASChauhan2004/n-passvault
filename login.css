@@ -1,0 +1,97 @@
+
+.main{
+    position: relative;
+    height: 650px;
+    width: 450px;
+    
+}
+.left{
+    position: relative;
+    height: 97%;
+    width: 20%;
+    background-color: black;
+    top: 0%;
+    left: 0%;
+    font-size: xxx-large;
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+
+
+.right{
+    position: absolute;
+    height:100%;
+    width: 80%;
+    background-color: chocolate;
+    top: 0%;
+    right: 0;
+}
+.right .header{
+    position: relative;
+    background-color: #212121;
+    top: 0%;
+    height: 15%;
+    width: 100%;
+    font-size: xxx-large;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items:end;
+}
+
+.add{
+    font-size: x-large;
+}
+
+#add-form{
+    position: absolute;
+    top: 16%;
+    left: 13%;
+    gap: 2px;
+    height: 16.5%;
+    width: 60%;
+    background-color: aqua;
+    display: none;
+    border-radius: 2px;
+}
+#add-form #website-name{
+    width: 92%;
+    margin-left: 2%;
+    margin-top: 2%;
+}
+#add-form #website-email,#website-password{
+    margin-top: 4px;
+    width: 92%;
+    margin-left: 2%;
+}
+
+#add-form .submit,.cancel{
+    margin-top: 2%;
+    margin-left: 2%;
+    width: 45.5%;
+}
+
+#vault-entries .entry {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#vault-entries .entry .website {
+    font-weight: bold;
+}
+
+#vault-entries .entry .email {
+    margin-right: 20px;
+}
+
+#vault-entries .entry .show-password {
+    cursor: pointer;
+    color: #007bff;
+}
