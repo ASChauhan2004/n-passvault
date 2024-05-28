@@ -21,6 +21,9 @@
         <div class="right">
             <h2>Generator</h2>
             <input class="output-shown" type="text" id="password" placeholder="Password" readonly>
+            <i class="far fa-copy" id="clipboard" onclick="clipboard()"></i>
+            <br>
+            <span id="message"> </span>
             <div class="buttons">
                 <div class="options">Length <input class="l-input" type="number" id="length" placeholder="Length" min="1" max="128"></div>
                 <label class="options"><input type="checkbox" id="include-uppercase"> A-Z</label>
