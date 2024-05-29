@@ -12,29 +12,29 @@
 </head>
 <body>
     <div class="main">
-        
-    <div class="left">
-        <i class="fas fa-user"></i>
-        <br>
-        <i class="fas fa-shield-alt"></i>
-        <br>
-        <i class="fas fa-lock"></i>
-        <br>
-        <i class="fas fa-magic"></i>
-    </div>
-    <div class="right">
-        <div class="header">N-PassVault</div>
-        <button id="add" onclick="showAddForm()"><i class="fas fa-user-plus"></i>Add Account</button>
-        <div id="add-form">
-            <input type="text" id="website-name" placeholder="Website Name">
-            <input type="text" id="website-email" placeholder="Email-ID">
-            <input type="text" id="website-password" placeholder="Password">
-            <button class="submit" onclick="submitAccount()">Submit</button>
-            <button class="cancel" onclick="hideAddForm()">Cancel</button>
+        <div class="left">
+            <i class="fas fa-user"></i>
+            <br>
+            <i class="fas fa-shield-alt"></i>
+            <br>
+            <i class="fas fa-lock"></i>
+            <br>
+            <i class="fas fa-magic"></i>
         </div>
-        <div id="vault-entries"></div>
+        <div class="right">
+            <div class="header">N-PassVault</div>
+            <button id="add" onclick="showAddForm()"><i class="fas fa-user-plus"></i> Add Account</button>
+            <button id="delete" onclick="deletePasswordStorage()"><i class="fas fa-trash-alt"></i> Delete All</button>
+            <div id="add-form">
+                <input type="text" id="website-name" placeholder="Website Name">
+                <input type="text" id="website-email" placeholder="Email-ID">
+                <input type="text" id="website-password" placeholder="Password">
+                <button class="submit" onclick="submitAccount()">Submit</button>
+                <button class="cancel" onclick="hideAddForm()">Cancel</button>
+            </div>
+            <div id="vault-entries"></div>
+        </div>
     </div>
-</div>
-<script  src="vaultScript.js"></script>
+    <script src="vaultScript.js"></script>
 </body>
 </html>

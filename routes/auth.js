@@ -68,4 +68,12 @@ router.get('/vault', verifyToken, async (req, res) => {
     }
 });
 
+router.delete('/vault/:id', verifyToken, async (req, res) => {
+    try {
+        await Vault.deleteOne({ _id: req.params.id, userID: req.user.userId });
+        res.status(200).json({ success: true, message: 'Account deleted successfully' });
+    } catch (error) {
+        res.status(500).json({ success: false, message: error.message });
+    }
+});
 module.exports = router;
