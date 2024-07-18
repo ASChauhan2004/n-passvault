@@ -12,11 +12,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     document.querySelector('.fas.fa-lock').addEventListener('click', () => {
-        window.location.href = '/Passcheck.html';
+        window.location.href = '/check.html';
     });
 
     document.querySelector('.fas.fa-magic').addEventListener('click', () => {
-        window.location.href = '/passgen.html';
+        window.location.href = '/generator.html';
     });
 
     fetchVaultEntries();
@@ -133,25 +133,4 @@ function deleteAccount(id) {
         });
 }
 
-function deletePasswordStorage() {
-    const token = localStorage.getItem('token');
 
-    fetch('http://localhost:5000/api/vault', {
-        method: 'DELETE',
-        headers: {
-            'Authorization': `Bearer ${token}`
-        }
-    })
-        .then(response => response.json())
-        .then(data => {
-            if (data.success) {
-                alert('All accounts deleted successfully');
-                fetchVaultEntries();
-            } else {
-                alert(data.message);
-            }
-        }).catch(error => {
-            console.error('Error:', error);
-            alert("Failed to delete all accounts");
-        });
-}

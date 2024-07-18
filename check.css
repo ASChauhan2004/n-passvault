@@ -112,33 +112,48 @@ h2 {
     position: relative;
     text-align: center;
     color: #ff4d00;
+    font-size: 41px;
+    padding-top: 10%;
+    padding-bottom: 5%;
+    font-weight: 900;
 }
 
 .output-shown {
-    border: 1px;
     text-align: center;
     margin-left: 35px;
     width: 300px;
     height: 40px;
-    border-radius: 10px;
+    border-radius: 15px;
+    outline: none;
+    padding-left: 15px;
+    border-radius: 15px;
+    border: 1px solid #ff4d00;
+    font-size: 17px;
+    transition: all 0.3s ease;
+    background-color: #121212;
+    color: #ff4d00;
 }
 
 .f-button {
     text-align: center;
-    margin-top: 35px;
-    margin-left: 85px;
-    width: 200px;
-    height: 30px;
-    border-radius: 10px;
+    margin-top: 12%;
+    margin-left: 12%;
+    width: 80%;
+    height: 6%;
+    border-radius: 15px;
     color: black;
-    background-color: aqua;
+    font-size: x-large;
+    font-weight: 900;
+    background-color: #ff4d00;
+    border: 1px solid black;
+    cursor: pointer;
 }
 
 .p-text {
     margin-left: 30px;
     width: 300px;
     height: 25px;
-    color: white;
+    color: #ff4d00;
     background-color: black;
     border: 1px solid black;
     border-radius: 10px;
