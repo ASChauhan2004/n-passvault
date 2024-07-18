@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!token) {
         window.location.href = '/login.html';
     }
+
     document.querySelector('.fas.fa-user').addEventListener('click', () => {
         window.location.href = '/user.html';
     });
@@ -54,7 +55,8 @@ function submitAccount() {
             } else {
                 alert(data.message);
             }
-        }).catch(error => {
+        })
+        .catch(error => {
             console.error('Error:', error);
             alert("Failed to add account");
         });
@@ -76,7 +78,8 @@ function fetchVaultEntries() {
             } else {
                 alert(data.message);
             }
-        }).catch(error => {
+        })
+        .catch(error => {
             console.error('Error:', error);
             alert("Failed to fetch vault entries");
         });
@@ -127,10 +130,33 @@ function deleteAccount(id) {
             } else {
                 alert(data.message);
             }
-        }).catch(error => {
+        })
+        .catch(error => {
             console.error('Error:', error);
             alert("Failed to delete account");
         });
 }
 
+function deletePasswordStorage() {
+    const token = localStorage.getItem('token');
 
+    fetch('http://localhost:5000/api/vault', {
+        method: 'DELETE',
+        headers: {
+            'Authorization': `Bearer ${token}`
+        }
+    })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                alert('All accounts deleted successfully');
+                fetchVaultEntries();
+            } else {
+                alert(data.message);
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert("Failed to delete all accounts");
+        });
+}
