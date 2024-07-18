@@ -185,7 +185,7 @@ html,body{
     left: 2%;
     height: 33%;
     width: 345px;
-    background-color: #121212;
+    background-color: black;
     display: flex;
     flex-direction: column;
     border-radius: 2px;
