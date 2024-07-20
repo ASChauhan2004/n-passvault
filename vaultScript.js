@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const token = localStorage.getItem('token');
     if (!token) {
         window.location.href = '/login.html';
+        return;
     }
 
     document.querySelector('.fas.fa-user').addEventListener('click', () => {
@@ -31,6 +32,12 @@ function hideAddForm() {
     document.getElementById('add-form').style.display = "none";
 }
 
+function clearForm() {
+    document.getElementById('website-name').value = '';
+    document.getElementById('website-email').value = '';
+    document.getElementById('website-password').value = '';
+}
+
 function submitAccount() {
     const website = document.getElementById('website-name').value;
     const email = document.getElementById('website-email').value;
@@ -52,6 +59,7 @@ function submitAccount() {
                 alert('Account added successfully');
                 fetchVaultEntries();
                 hideAddForm();
+                clearForm();
             } else {
                 alert(data.message);
             }
@@ -60,6 +68,8 @@ function submitAccount() {
             console.error('Error:', error);
             alert("Failed to add account");
         });
+
+    website.value = '';
 }
 
 function fetchVaultEntries() {
@@ -95,14 +105,31 @@ function displayVaultEntries(entries) {
         entryDiv.innerHTML = `
             <div class="website">${entry.website}</div>
             <div class="email">${entry.email}</div>
-            <div class="show-password" data-password="${entry.password}">Show Password</div>
+            <div class="show-password" data-password="${entry.password}">Show Password</i></div>
+            <i class="far fa-copy" id="clipboard" data-password="${entry.password}"> </i>
             <button class="delete-account" data-id="${entry._id}"><i class="fas fa-trash-alt"></i> Delete</button>
         `;
 
         entryDiv.querySelector('.show-password').addEventListener('click', (e) => {
             const password = e.target.getAttribute('data-password');
-            alert(`Password: ${password}`);
+            e.target.innerHTML=`${password}`;
+            e.target.style.textDecoration = 'none';
+            e.target.style.fontWeight = 'bold';
+            setTimeout(() => {
+                e.target.innerHTML = 'Show Password';
+                e.target.style.textDecoration = 'underline';
+                e.target.style.fontWeight = 'normal';
+            }, 3000);
         });
+
+        entryDiv.querySelector('.far.fa-copy').addEventListener('click', (e) => {
+            const copyText = e.target.getAttribute('data-password');
+            navigator.clipboard.writeText(copyText);
+            e.target.innerHTML=' Copied!';
+            setTimeout(() => {
+                e.target.innerHTML = ' ';
+            }, 2000);
+        })
 
         entryDiv.querySelector('.delete-account').addEventListener('click', (e) => {
             const id = e.target.getAttribute('data-id');
