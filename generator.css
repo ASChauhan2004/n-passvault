@@ -122,13 +122,20 @@ h2 {
     border: 2px solid #ff4d00;
     padding: 10px;
     border-radius: 10px;
-    color: white;
+    color: #ff4d00;
 }
 
 .options input[type="checkbox"] {
     margin-right: 10px;
     cursor: pointer;
     accent-color: #ff4d00;
+}
+
+.options input[type="number"] {
+    margin-right: 10px;
+    cursor: pointer;
+    accent-color: #ff4d00;
+    background-color: #121212;
 }
 
 .f-button {
