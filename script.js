@@ -1,3 +1,20 @@
+const loginText = document.querySelector(".title-text .login");
+const loginForm = document.querySelector("form.login");
+const loginBtn = document.querySelector("label.login");
+const signupBtn = document.querySelector("label.signup");
+const signupLink = document.querySelector("form .signup-link a");
+signupBtn.onclick = (()=>{
+  loginForm.style.marginLeft = "-50%";
+  loginText.style.marginLeft = "-50%";
+});
+loginBtn.onclick = (()=>{
+  loginForm.style.marginLeft = "0%";
+  loginText.style.marginLeft = "0%";
+});
+signupLink.onclick = (()=>{
+  signupBtn.click();
+  return false;
+});
 // Get references to the buttons
 const signUpBtn = document.getElementById('sign-up');
 const logInBtn = document.getElementById('log-in');
@@ -79,10 +96,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     document.querySelector('.fas.fa-lock').addEventListener('click', () => {
-        window.location.href = '/Passcheck.html';
+        window.location.href = '/check.html';
     });
 
     document.querySelector('.fas.fa-magic').addEventListener('click', () => {
-        window.location.href = '/passgen.html';
+        window.location.href = '/generator.html';
     });
 });

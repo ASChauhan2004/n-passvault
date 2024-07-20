@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
             document.querySelector('.email').textContent = user.email;
         }
     }else {
-        window.location.href = 'login/html';
+        window.location.href = 'login.html';
     }
 });
 
@@ -27,10 +27,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     document.querySelector('.fas.fa-lock').addEventListener('click', () => {
-        window.location.href = '/Passcheck.html';
+        window.location.href = '/check.html';
     });
 
     document.querySelector('.fas.fa-magic').addEventListener('click', () => {
-        window.location.href = '/passgen.html';
+        window.location.href = '/generator.html';
     });
 });

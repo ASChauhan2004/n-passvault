@@ -4,35 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="vault.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="main">
-        
-    <div class="left">
-        <i class="fas fa-user"></i>
-        <br>
-        <i class="fas fa-shield-alt"></i>
-        <br>
-        <i class="fas fa-lock"></i>
-        <br>
-        <i class="fas fa-magic"></i>
-    </div>
-    <div class="right">
-        <div class="header">N-PassVault</div>
-        <button id="add" onclick="showAddForm()"><i class="fas fa-user-plus"></i></button>
-        <div id="add-form">
-            <input type="text" id="website-name" placeholder="Website Name">
-            <input type="text" id="website-email" placeholder="Email-ID">
-            <input type="text" id="website-password" placeholder="Password">
-            <button class="submit" onclick="submitAccount()">Submit</button>
-            <button class="cancel" onclick="hideAddForm()">Cancel</button>
+        <div class="left">
+            <i class="fas fa-user"></i>
+            <br>
+            <i class="fas fa-shield-alt"></i>
+            <br>
+            <i class="fas fa-lock"></i>
+            <br>
+            <i class="fas fa-magic"></i>
         </div>
-        <div id="vault-entries"></div>
+        <div class="right">
+            <div class="header">N-PassVault</div>
+            <button id="add" onclick="showAddForm()"><i class="fas fa-user-plus"></i> Add Account</button>
+            <div id="add-form">
+                <input type="text" id="website-name" placeholder="Website Name">
+                <input type="text" id="website-email" placeholder="Email-ID">
+                <input type="text" id="website-password" placeholder="Password">
+                <button class="submit" onclick="submitAccount()">Submit</button>
+                <button class="cancel" onclick="hideAddForm()">Cancel</button>
+            </div>
+            <div id="vault-entries"></div>
+        </div>
     </div>
-</div>
-<script  src="vaultScript.js"></script>
+    <script src="vaultScript.js"></script>
 </body>
 </html>

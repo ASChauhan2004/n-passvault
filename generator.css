@@ -58,7 +58,102 @@ html,body{
     font-weight: 900;
 }
 
-.left .fas.fa-user,.fas.fas.fa-shield-alt,.fas.fa-magic{
+h2 {
+    color: #ff4d00;
+    font-size: xxx-large;
+    font-weight: 500;
+    position: relative;
+    text-align: center;
+}
+
+.output-shown {
+    border: 1px;
+    background-color: #121212;
+    color: #ff4d00;
+    border: 2px solid #ff4d00;
+    border-radius: 4px;
+    text-align: center;
+    margin-left: 22px;
+    width: 300px;
+    height: 40px;
+    border-radius: 10px;
+}
+
+#clipboard{
+    margin-left: 5px;
+    color: #ff4d00;
+    font-size: 20px;
+}
+
+#message{
+    display: block;
+    color: #ff4d00;
+    position: absolute;
+    margin-left: 110px;
+    margin-top: 10px;
+}
+
+.l-input {
+    border: 1px;
+    color: #ff4d00;
+    border: 2px solid #ff4d00;
+    text-align: center;
+    margin-left: 22px;
+    font-size: small;
+    margin-left: 120px;
+    width: 100px;
+    height: 20px;
+    border-radius: 5px;
+}
+
+.buttons {
+    margin-top: 50px;
+    margin-left: 22px;
+}
+
+.options {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    text-align: left;
+    width: 310px;
+    height: 40px;
+    background-color: #121212;
+    border: 2px solid #ff4d00;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+}
+
+.options input[type="checkbox"] {
+    margin-right: 10px;
+    cursor: pointer;
+    accent-color: #ff4d00;
+}
+
+.f-button {
+    text-align: center;
+    margin-top: 35px;
+    margin-left: 55px;
+    width: 250px;
+    height: 30px;
+    font-size: large;
+    font-weight: 500;
+    color: black;
+    background-color: aqua;
+    cursor: pointer;
+    background-color: #121212;
+    color: #ff4d00;
+    border: 2px solid #ff4d00;
+    border-radius: 10px;
+}
+
+.f-button:hover {
+    background-color: #ff4d00;
+    color: black;
+}
+
+.left .fas.fa-user,.fas.fa-lock,.fas.fa-shield-alt{
     font-size: 75px;
     color: #ff4d00;
     width: 100%;
@@ -77,6 +172,26 @@ html,body{
     align-items: center;
     display: flex;
 }
+.fas.fa-magic{
+    color: black;
+    background-color: #ff4d00;
+    width: 100%;
+    height: 15%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    cursor: pointer;
+}
+.fas.fa-lock:hover{
+    color: black;
+    background-color: #ff4d00;
+    width: 100%;
+    height: 15%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    cursor: pointer;
+}
 .fas.fa-shield-alt:hover{
     color: black;
     background-color: #ff4d00;
@@ -86,77 +201,4 @@ html,body{
     align-items: center;
     display: flex;
     cursor: pointer;
-}
-.fas.fa-lock{
-    color: black;
-    background-color: #ff4d00;
-    width: 100%;
-    height: 15%;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    cursor: pointer;
-    border-radius: 2px;
-}
-.fas.fa-magic:hover{
-    color: black;
-    background-color: #ff4d00;
-    width: 100%;
-    height: 15%;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    cursor: pointer;
-}
-h2 {
-    position: relative;
-    text-align: center;
-    color: #ff4d00;
-    font-size: 41px;
-    padding-top: 10%;
-    padding-bottom: 5%;
-    font-weight: 900;
-}
-
-.output-shown {
-    text-align: center;
-    margin-left: 35px;
-    width: 300px;
-    height: 40px;
-    border-radius: 15px;
-    outline: none;
-    padding-left: 15px;
-    border-radius: 15px;
-    border: 1px solid #ff4d00;
-    font-size: 17px;
-    transition: all 0.3s ease;
-    background-color: #121212;
-    color: #ff4d00;
-}
-
-.f-button {
-    text-align: center;
-    margin-top: 12%;
-    margin-left: 12%;
-    width: 80%;
-    height: 6%;
-    border-radius: 15px;
-    color: black;
-    font-size: x-large;
-    font-weight: 900;
-    background-color: #ff4d00;
-    border: 1px solid black;
-    cursor: pointer;
-}
-
-.p-text {
-    margin-left: 30px;
-    width: 300px;
-    height: 25px;
-    color: #ff4d00;
-    background-color: black;
-    border: 1px solid black;
-    border-radius: 10px;
-    padding: 3px;
-    text-align: center;
 }

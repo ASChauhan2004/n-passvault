@@ -1,5 +1,12 @@
 document.getElementById('generate').addEventListener('click', function() {
     const length = document.getElementById('length').value;
+    document.getElementById('message').textContent = "";
+
+    if (length > 25) {
+        document.getElementById('message').textContent = "Max length allowed is 25";
+        return; 
+    }
+    
     const includeUppercase = document.getElementById('include-uppercase').checked;
     const includeLowercase = document.getElementById('include-lowercase').checked;
     const includeNumbers = document.getElementById('include-numbers').checked;
@@ -26,6 +33,14 @@ document.getElementById('generate').addEventListener('click', function() {
     document.getElementById('password').value = password;
 });
 
+function clipboard() {
+    var copyText = document.getElementById("password");
+    copyText.select();
+    copyText.setSelectionRange(0, 99999); 
+    navigator.clipboard.writeText(copyText.value);
+    document.getElementById('message').textContent = "Copied to clipboard";
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('.fas.fa-user').addEventListener('click', () => {
         window.location.href = '/user.html';
@@ -36,10 +51,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     document.querySelector('.fas.fa-lock').addEventListener('click', () => {
-        window.location.href = '/Passcheck.html';
+        window.location.href = '/check.html';
     });
 
     document.querySelector('.fas.fa-magic').addEventListener('click', () => {
-        window.location.href = '/passgen.html';
+        window.location.href = '/generator.html';
     });
 });
