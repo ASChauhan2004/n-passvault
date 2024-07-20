@@ -22,6 +22,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     fetchVaultEntries();
+    
+    document.getElementById('add').addEventListener('click', showAddForm);
+    document.querySelector('.cancel').addEventListener('click', hideAddForm);
+    document.querySelector('.submit').addEventListener('click', submitAccount);
 });
 
 function showAddForm() {
@@ -72,7 +76,7 @@ function submitAccount() {
     website.value = '';
 }
 
-function fetchVaultEntries() {
+async function fetchVaultEntries() {
     const token = localStorage.getItem('token');
 
     fetch('http://localhost:5000/api/vault', {
@@ -85,6 +89,7 @@ function fetchVaultEntries() {
         .then(data => {
             if (data.success) {
                 displayVaultEntries(data.vaultEntries);
+                return data.vaultEntries;
             } else {
                 alert(data.message);
             }
@@ -161,29 +166,5 @@ function deleteAccount(id) {
         .catch(error => {
             console.error('Error:', error);
             alert("Failed to delete account");
-        });
-}
-
-function deletePasswordStorage() {
-    const token = localStorage.getItem('token');
-
-    fetch('http://localhost:5000/api/vault', {
-        method: 'DELETE',
-        headers: {
-            'Authorization': `Bearer ${token}`
-        }
-    })
-        .then(response => response.json())
-        .then(data => {
-            if (data.success) {
-                alert('All accounts deleted successfully');
-                fetchVaultEntries();
-            } else {
-                alert(data.message);
-            }
-        })
-        .catch(error => {
-            console.error('Error:', error);
-            alert("Failed to delete all accounts");
         });
 }

@@ -1,3 +1,23 @@
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelector('.fas.fa-user').addEventListener('click', () => {
+        window.location.href = '/user.html';
+    });
+
+    document.querySelector('.fas.fa-shield-alt').addEventListener('click', () => {
+        window.location.href = '/vault.html';
+    });
+
+    document.querySelector('.fas.fa-lock').addEventListener('click', () => {
+        window.location.href = '/check.html';
+    });
+
+    document.querySelector('.fas.fa-magic').addEventListener('click', () => {
+        window.location.href = '/generator.html';
+    });
+
+    document.getElementById('clipboard').addEventListener('click', clipboard);
+});
+
 document.getElementById('generate').addEventListener('click', function() {
     const length = document.getElementById('length').value;
     document.getElementById('message').textContent = "";
@@ -41,20 +61,3 @@ function clipboard() {
     document.getElementById('message').textContent = "Copied to clipboard";
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    document.querySelector('.fas.fa-user').addEventListener('click', () => {
-        window.location.href = '/user.html';
-    });
-
-    document.querySelector('.fas.fa-shield-alt').addEventListener('click', () => {
-        window.location.href = '/vault.html';
-    });
-
-    document.querySelector('.fas.fa-lock').addEventListener('click', () => {
-        window.location.href = '/check.html';
-    });
-
-    document.querySelector('.fas.fa-magic').addEventListener('click', () => {
-        window.location.href = '/generator.html';
-    });
-});

@@ -9,6 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }else {
         window.location.href = 'login.html';
     }
+
+    document.querySelector('.log').addEventListener('click', logout);
 });
 
 function logout(){
