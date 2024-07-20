@@ -50,6 +50,14 @@ function checkPasswordStrength(password) {
             strength.textContent = 'Password Strength: Very Strong';
             strength.style.color = 'green';
             break;
+        case 6:
+            strength.textContent = 'Password Strength: Very Strong';
+            strength.style.color = 'green';
+            break;
+        case 7:
+            strength.textContent = 'Password Strength: Very Strong';
+            strength.style.color = 'green';
+            break;      
         default:
             strength.textContent = '';
     }

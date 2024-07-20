@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function logout(){
-    localStorage.removeItem('tokem');
+    localStorage.removeItem('token');
     localStorage.removeItem('user');
     window.location.href = '/login.html';
 }
