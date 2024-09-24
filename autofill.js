@@ -24,6 +24,10 @@ function autofillCredentials(entry) {
     chrome.tabs.executeScript({
         code: `
             document.querySelector('input[type=text]').value = '${entry.email}';
+            try{
+            document.querySelector('input[type=email]').value = '${entry.email}';
+            }
+            catch(e){}
             document.querySelector('input[type=password]').value = '${entry.password}';
         `
     });

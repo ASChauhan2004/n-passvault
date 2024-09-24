@@ -60,7 +60,6 @@ function submitAccount() {
         .then(response => response.json())
         .then(data => {
             if (data.success) {
-                alert('Account added successfully');
                 fetchVaultEntries();
                 hideAddForm();
                 clearForm();
@@ -157,7 +156,6 @@ function deleteAccount(id) {
         .then(response => response.json())
         .then(data => {
             if (data.success) {
-                alert('Account deleted successfully');
                 fetchVaultEntries();
             } else {
                 alert(data.message);
